@@ -6,7 +6,7 @@ def luckyNumbers(rangeLeft, rangeRight, size):
     shuffle(originalRange)
     return originalRange[:size]
 
-randomnumbers = luckyNumbers(1, 59, 6)
+randomnumbers = luckyNumbers(1, 49, 6)
 
 for y in randomnumbers:
     print(y)
