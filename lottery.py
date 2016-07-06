@@ -1,11 +1,18 @@
-from random import randint
-randomnumbers = []
-for y in range (0, 6):
-    y = randint(1,50)
-    randomnumbers.append(y)
+from random import randint, shuffle
+
+def luckyNumbers(rangeLeft, rangeRight, size):
+    """ determines the lucky numbers which win the lottery! """
+    originalRange = range(rangeLeft, rangeRight)
+    shuffle(originalRange)
+    return originalRange[:size]
+
+randomnumbers = luckyNumbers(1, 59, 6)
+
+for y in randomnumbers:
     print(y)
 
 randomnumbers1 = []
+
 for z in range (0,6):
     try:
         number = int(raw_input("Choose six numbers and enter them one by one from 1 to 49:"))
